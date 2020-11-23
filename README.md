@@ -9,6 +9,7 @@ The code for the client is in `SearchEngine` and the code for the server is in `
 4. I decided to show the entire path of each file rather than it's parent directory (this is contrary to the mockup).
 
 ### Build & Run
+1. Copy the text in between ======== on the Canvas submission and store it in a file called "Credentials.json".
 1. Move "Credentials.json" to inside `/SearchEngine` and inside `/SearchEngine/src/main/resources/`
 2. Make sure X11 is installed.
 3. `cd` into `SearchEngine` in a new Terminal.
