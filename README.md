@@ -9,10 +9,11 @@ The code for the client is in `SearchEngine` and the code for the server is in `
 4. I decided to show the entire path of each file rather than it's parent directory (this is contrary to the mockup).
 
 ### Build & Run
-1. Copy the text in between ======== on the Canvas submission and store it in a file called "Credentials.json".
-2. Move "Credentials.json" to inside `/SearchEngine` and inside `/SearchEngine/src/main/resources/`
-3. Make sure X11 is installed.
-4. `xhost +`
-5. `cd` into `SearchEngine` in a new Terminal.
-6. Run `docker build --tag v1 .`
-7. Run `docker run -v /tmp/.X11-unix:/tmp/.X11-unix --rm -it -e DISPLAY=$(ipconfig getifaddr en0):0 v1:latest`. If `ifconfig` is unavailable on your machine, replace `$(...)` with your local IP address with respect to your router.
+1. `git clone https://github.com/masonalan/final.git`
+2. Copy the text in between ======== on the Canvas submission and store it in a file called "Credentials.json".
+3. Move "Credentials.json" to inside `/SearchEngine` and inside `/SearchEngine/src/main/resources/`
+4. Make sure X11 is installed.
+5. `xhost +`
+6. `cd` into `SearchEngine` in a new Terminal.
+7. Run `docker build --tag v1 .`
+8. Run `docker run -v /tmp/.X11-unix:/tmp/.X11-unix --rm -it -e DISPLAY=$(ipconfig getifaddr en0):0 v1:latest`. If `ifconfig` is unavailable on your machine, replace `$(...)` with your local IP address with respect to your router.
