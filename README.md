@@ -2,6 +2,8 @@
 
 The code for the client is in `SearchEngine` and the code for the server is in `SearchBackend`. The server code is already running on a Hadoop cluster in Google Cloud. However, you can build the `SearchEngine` code from the source using Docker.
 
+Walkthrough: https://www.youtube.com/watch?v=F_TKE_38PUU&feature=youtu.be
+
 ### Notes & Assumptions
 1. In the inverted indices mapper splits each line up by spaces. The drawbacks to this approach is that "end." and "end" would be considered as two different words in the final inverted indices table. This only effects the "Top-N" count, as my implementation of the "Term" search checks to see if an index contains a search query. I found this drawback to not matter much, because the highest ranked words are all conjunctions, and by nature, would never end a sentence or be possesive.
 2. For "Term" search, I checked to see if an index contained the term. This method returned the same counts of "king" in "kinghenryiv" and "kinghenryvi" that were in the mockups. This also most closely resembles "cmd-f" which also resulted in the same counts of "king" in those files.
